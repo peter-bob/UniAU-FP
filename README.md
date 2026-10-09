@@ -20,14 +20,8 @@ UniAU-FP/
 |-- dataloader/                         AFLFP and MEEI data loaders
 |-- models/                             UniAU-FP and ablation model definitions
 |-- utils/                              Training utilities and learning-rate tools
-|-- train_fer_first_stage_AFLFP_3.py    AFLFP training entry point
-|-- train_fer_first_stage_AFLFP_4.py    AFLFP training entry point
-|-- train_fer_first_stage_MEEI_3.py     MEEI training entry point
-|-- train_fer_first_stage_MEEI_4.py     MEEI training entry point
-|-- train_ablation_AFLFP.py             AFLFP ablation experiments
-|-- train_ablation_MEEI.py              MEEI ablation experiments
-|-- attention_heatmap_compare_*.py      Attention and Grad-CAM visualization
-|-- UniAU-FP_camera_ready_revised.tex   Manuscript source
+|-- train_AFLFP.py             AFLFP training entry point
+|-- train_MEEI.py              MEEI training entry point
 |-- requirements.txt                    Python dependencies
 |-- LICENSE                             MIT license
 `-- README.md                           Project documentation
@@ -191,10 +185,6 @@ The following values are the reported single-run results from the accompanying m
 
 These values are reference results, not a guarantee of reproduction on a different hardware, software, or dataset release. Record the Git commit, dataset version, split files, random seed, CUDA/PyTorch versions, checkpoint checksum, and complete command line for each run.
 
-## Paper
-
-The manuscript source is included in `UniAU-FP_camera_ready_revised.tex`. Please verify the final experimental tables against the archived training logs before submitting or citing a camera-ready version.
-
 ## License and Third-Party Materials
 
 The original research code is released under the MIT License in `LICENSE`. AFLFP, MEEI, CLIP weights, and other third-party materials remain subject to their own licenses, access requirements, and attribution rules.
@@ -203,6 +193,4 @@ The original research code is released under the MIT License in `LICENSE`. AFLFP
 
 The formal citation will be added after the conference publication metadata is available.
 
-## Contact
 
-For implementation questions, open a GitHub issue with the operating system, Python/PyTorch versions, command line, and complete error message. Do not upload patient images or private data to an issue.
