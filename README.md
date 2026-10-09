@@ -5,7 +5,8 @@ Official implementation of **UniAU-FP**, a vision-language framework for unilate
 UniAU-FP predicts five AUs independently on the anatomical left and right sides of the face: `AU02`, `AU04`, `AU06`, `AU15`, and `AU43`. The model combines CLIP visual features, hierarchical bilateral asymmetry modeling, AU-aware text prompts, cross-modal attention, and an auxiliary asymmetry prediction branch.
 
 <!-- Figure placement: the paper framework figure is stored at assets/uniau_fp_framework.png. Replace this file with a higher-resolution version if needed. -->
-![UniAU-FP framework](assets/uniau_fp_framework.png)
+<img width="1487" height="941" alt="uniau_fp_framework" src="https://github.com/user-attachments/assets/86e7c05e-f838-4106-8d7b-54308c7a62b3" />
+
 
 > This repository contains research code. It is not a medical device and must not be used for clinical diagnosis without appropriate validation and regulatory review.
 
