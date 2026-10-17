@@ -1,6 +1,7 @@
 # UniAU-FP
 
 The official code for the paper 'UniAU-FP: Unilateral Facial Action Unit Intensity Estimation via Vision-Language Model for Muscle Movement Assessment in Facial Paralysis'.
+
 This paper has been accepted by 2026 IEEE International Conference on Bioinformatics and Biomedicine (BIBM).
 
 <!-- Figure placement: the paper framework figure is stored at assets/uniau_fp_framework.png. Replace this file with a higher-resolution version if needed. -->
@@ -60,30 +61,9 @@ weights/
 
 Do not commit model weights, patient images, private annotations, logs, or generated outputs.
 
-## Data Preparation
+## Data
 
-The experiments use two facial palsy benchmarks:
-
-| Dataset | Total images | Train | Test |
-|---|---:|---:|---:|
-| AFLFP | 3,460 | 2,775 | 685 |
-| MEEI | 2,395 | 1,915 | 480 |
-
-The original facial images are not redistributed here. Obtain AFLFP and MEEI from their official sources and follow their access conditions and licenses. The public snapshot currently contains the first split files, such as `annotation/AFLFP_1_train.txt` and `annotation/MEEI_1_train.txt`.
-
-Place the locally obtained datasets as follows:
-
-```text
-UniAU-FP/
-|-- data/
-|   |-- AFLFP/
-|   `-- MEEI/
-|-- annotation/
-`-- weights/
-    `-- ViT-B-16.pt
-```
-
-The directory passed to `--data-path` must match the layout expected by the corresponding loader. The annotation files provide split/index information; they are not a replacement for the original datasets.
+Due to licensing restrictions, we cannot provide the complete AFLFP and MEEI datasets. Users need to obtain the raw datasets from their respective official project pages. The dataset annotations (unilateral facial action unit intensity) are publicly available. Users may only use the dataset annotations for non‑commercial academic research. Before downloading the dataset annotations, users are required to send an application email with the signed End User License Agreement as an attachment to xiayifan@sdu.edu.cn using a valid academic or institutional email account.
 
 ## Create Output Directories
 
@@ -117,42 +97,6 @@ python train_fer_first_stage_MEEI_4.py `
 
 The `_3.py` and `_4.py` entry points expose closely related model/training variants. Check the selected script with `python <script>.py --help` before launching a long run.
 
-## Ablation Experiments
-
-The ablation drivers compare four cumulative configurations:
-
-| Configuration | Components |
-|---|---|
-| C1 | Baseline visual regression model |
-| C2 | C1 plus cross-modal interaction |
-| C3 | C2 plus bilateral asymmetry modeling |
-| C4 | Full UniAU-FP with auxiliary asymmetry supervision |
-
-Run the full configuration with:
-
-```powershell
-python train_ablation_AFLFP.py --ablation_config 4
-python train_ablation_MEEI.py --ablation_config 4
-```
-
-Use `--ablation_config 1`, `2`, `3`, or `4` to select another configuration. For a new study, repeat each setting with multiple random seeds and report uncertainty across runs.
-
-## Attention Visualization
-
-`attention_heatmap_compare_FORCE5_BLUE.py` compares attention maps from baseline and full-model checkpoints. A typical AFLFP command is:
-
-```powershell
-python attention_heatmap_compare_FORCE5_BLUE.py `
-  --project-root . `
-  --dataset AFLFP `
-  --data-path .\data\AFLFP `
-  --data_split_path .\annotation `
-  --clip-path .\weights\ViT-B-16.pt `
-  --baseline-checkpoint .\outputs\AFLFP_ABLATION\C1_RUN\best_model.pth `
-  --full-checkpoint .\outputs\AFLFP_ABLATION\C4_RUN\best_model.pth
-```
-
-The visualization is qualitative. Anatomically plausible attention does not, by itself, establish clinical validity.
 
 ## Common Parameters
 
@@ -173,16 +117,6 @@ The visualization is qualitative. Anatomically plausible attention does not, by 
 
 Run `python <script>.py --help` because the exact option set can differ between entry points.
 
-## Results
-
-The following values are the reported single-run results from the accompanying manuscript:
-
-| Dataset | RMSE (lower is better) | MAE (lower is better) |
-|---|---:|---:|
-| AFLFP | **0.183** | **0.124** |
-| MEEI | **0.144** | **0.109** |
-
-These values are reference results, not a guarantee of reproduction on a different hardware, software, or dataset release. Record the Git commit, dataset version, split files, random seed, CUDA/PyTorch versions, checkpoint checksum, and complete command line for each run.
 
 ## License and Third-Party Materials
 
