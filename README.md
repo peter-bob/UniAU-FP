@@ -1,8 +1,7 @@
 # UniAU-FP
 
-Official implementation of **UniAU-FP**, a vision-language framework for unilateral facial Action Unit (AU) intensity estimation in facial paralysis assessment.
-
-UniAU-FP predicts five AUs independently on the anatomical left and right sides of the face: `AU02`, `AU04`, `AU06`, `AU15`, and `AU43`. The model combines CLIP visual features, hierarchical bilateral asymmetry modeling, AU-aware text prompts, cross-modal attention, and an auxiliary asymmetry prediction branch.
+The official code for the paper 'UniAU-FP: Unilateral Facial Action Unit Intensity Estimation via Vision-Language Model for Muscle Movement Assessment in Facial Paralysis'.
+This paper has been accepted by 2026 IEEE International Conference on Bioinformatics and Biomedicine (BIBM).
 
 <!-- Figure placement: the paper framework figure is stored at assets/uniau_fp_framework.png. Replace this file with a higher-resolution version if needed. -->
 <img width="1487" height="941" alt="uniau_fp_framework" src="https://github.com/user-attachments/assets/86e7c05e-f838-4106-8d7b-54308c7a62b3" />
