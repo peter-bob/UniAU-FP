@@ -31,10 +31,6 @@ UniAU-FP/
 
 The commands below use Windows PowerShell. For Linux or macOS, replace `py -3.10` with the corresponding Python command.
 
-```powershell
-git clone https://github.com/peter-bob/UniAU-FP.git
-cd UniAU-FP
-
 py -3.10 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
@@ -51,16 +47,11 @@ The checkpoint path can also be changed with `--clip-path`.
 
 ## Pretrained Weights
 
-The CLIP checkpoint and trained UniAU-FP checkpoints are not included in this repository. Download or prepare them separately according to the applicable license and place them in local ignored directories:
+Before training, download the CLIP ViT-B/16 checkpoint and place it under `clip_ckpt/`:
 
-```text
-weights/
-|-- ViT-B-16.pt
-`-- <trained_checkpoint>.pth
-```
-
-Do not commit model weights, patient images, private annotations, logs, or generated outputs.
-
+| File name | Download link |
+|---|---|
+| `ViT-B-16.pt` | [Download](https://openaipublic.azureedge.net/clip/models/5806e77cd80f8b59890b7e101eabd078d9fb84e6937f9e85e4ecb61988df416f/ViT-B-16.pt) |
 ## Data
 
 Due to licensing restrictions, we cannot provide the complete AFLFP and MEEI datasets. Users need to obtain the raw datasets from their respective official project pages. The dataset annotations (unilateral facial action unit intensity) are publicly available. Users may only use the dataset annotations for non‑commercial academic research. Before downloading the dataset annotations, users are required to send an application email with the signed End User License Agreement as an attachment to xiayifan@sdu.edu.cn using a valid academic or institutional email account.
