@@ -93,7 +93,7 @@ The `_3.py` and `_4.py` entry points expose closely related model/training varia
 |---|---|---:|
 | `--data-path` | Dataset root directory | `./data/AFLFP` or `./data/MEEI` |
 | `--data_split_path` | Annotation and split directory | `./annotation` |
-| `--clip-path` | CLIP ViT-B/16 checkpoint | `./weights/ViT-B-16.pt` |
+| `--clip-path` | CLIP ViT-B/16 checkpoint | `.clip_ckpt/ViT-B-16.pt` |
 | `--batch-size` | Training batch size | `128` |
 | `--test-batch-size` | Evaluation batch size | `50` |
 | `--epochs` | Number of training epochs | `100` |
