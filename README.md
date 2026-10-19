@@ -15,7 +15,6 @@ This paper has been accepted by 2026 IEEE International Conference on Bioinforma
 ```text
 UniAU-FP/
 |-- annotation/                         Experiment split and index files
-|-- assets/                             Paper framework figure
 |-- clip/                               Local CLIP implementation and tokenizer
 |-- dataloader/                         AFLFP and MEEI data loaders
 |-- models/                             UniAU-FP and ablation model definitions
@@ -23,7 +22,6 @@ UniAU-FP/
 |-- train_AFLFP.py             AFLFP training entry point
 |-- train_MEEI.py              MEEI training entry point
 |-- requirements.txt                    Python dependencies
-|-- LICENSE                             MIT license
 `-- README.md                           Project documentation
 ```
 
@@ -40,7 +38,7 @@ pip install -r requirements.txt
 Install the PyTorch build that matches your CUDA version from <https://pytorch.org/get-started/locally/>. The repository uses a local CLIP ViT-B/16 checkpoint. Keep it outside Git history and place it at:
 
 ```text
-weights/ViT-B-16.pt
+clip_ckpt/ViT-B-16.pt
 ```
 
 The checkpoint path can also be changed with `--clip-path`.
