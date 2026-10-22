@@ -2,13 +2,11 @@
 
 The official code for the paper 'UniAU-FP: Unilateral Facial Action Unit Intensity Estimation via Vision-Language Model for Muscle Movement Assessment in Facial Paralysis'.
 
-| This paper has been accepted by 2026 IEEE International Conference on Bioinformatics and Biomedicine (BIBM). |
+**This paper has been accepted by 2026 IEEE International Conference on Bioinformatics and Biomedicine (BIBM).**
 
 <!-- Figure placement: the paper framework figure is stored at assets/uniau_fp_framework.png. Replace this file with a higher-resolution version if needed. -->
 <img width="1487" height="941" alt="uniau_fp_framework" src="https://github.com/user-attachments/assets/86e7c05e-f838-4106-8d7b-54308c7a62b3" />
 
-
-> This repository contains research code. It is not a medical device and must not be used for clinical diagnosis without appropriate validation and regulatory review.
 
 ## Project Structure
 
@@ -52,7 +50,7 @@ Before training, download the CLIP ViT-B/16 checkpoint and place it under `clip_
 | `ViT-B-16.pt` | [Download](https://openaipublic.azureedge.net/clip/models/5806e77cd80f8b59890b7e101eabd078d9fb84e6937f9e85e4ecb61988df416f/ViT-B-16.pt) |
 ## Data
 
-Due to licensing restrictions, we cannot provide the complete AFLFP and MEEI datasets. Users need to obtain the raw datasets from their respective official project pages. The dataset annotations (unilateral facial action unit intensity) are publicly available. Users may only use the dataset annotations for non‑commercial academic research. Before downloading the dataset annotations, users are required to send an application email with the signed End User License Agreement as an attachment to xiayifan@sdu.edu.cn using a valid academic or institutional email account.
+Due to licensing restrictions, we cannot provide the complete AFLFP and MEEI datasets. Users need to obtain the raw datasets from their respective official project pages. The dataset annotations (unilateral facial action unit intensity) are publicly available. Users may only use the dataset annotations for non‑commercial academic research. Before downloading the dataset annotations, users are required to send an application email with the signed  [End User License Agreement](End_User_License_Agreement.pdf) as an attachment to xiayifan@sdu.edu.cn using a valid academic or institutional email account.
 
 ## Create Output Directories
 
