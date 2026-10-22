@@ -69,7 +69,7 @@ Training results are written under `outputs/`, which is ignored by Git.
 ### AFLFP
 
 ```powershell
-python train_fer_first_stage_AFLFP_4.py `
+python train_AFLFP.py `
   --data-path .\data\AFLFP `
   --data_split_path .\annotation `
   --clip-path .\weights\ViT-B-16.pt
@@ -78,13 +78,11 @@ python train_fer_first_stage_AFLFP_4.py `
 ### MEEI
 
 ```powershell
-python train_fer_first_stage_MEEI_4.py `
+python train_MEEI.py `
   --data-path .\data\MEEI `
   --data_split_path .\annotation `
   --clip-path .\weights\ViT-B-16.pt
 ```
-
-The `_3.py` and `_4.py` entry points expose closely related model/training variants. Check the selected script with `python <script>.py --help` before launching a long run.
 
 
 ## Common Parameters
